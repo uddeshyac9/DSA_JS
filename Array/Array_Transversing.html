@@ -7,13 +7,23 @@
 </head>
 <body>
     <h1>Array Transversing</h1>
+    <p>Access Arrray by its Index</p>
+    <Input type="text" id="element"/>
+    <Button onclick="getIndex()"> Get Index</Button>
+    <br/>
 </body>
 <Script>
     let data = [10,5,3,8,6,19,22,16,28,39,15]
     for (let index = 0; index < data.length; index++) {
-        document.write(`Array ${index} is ${data[index]} <br/>`)
-        
+        document.write(` Array ${index} is ${data[index]} <br/>`)
+        console.log(data[index])
     }
+    function getIndex() {
+      let index =  document.getElementById('element').value
+        alert(data[index])
+    }
+    
+
 
 </Script>
 </html>
