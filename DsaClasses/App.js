@@ -1,49 +1,203 @@
+//Loop Class
 
-// Valid Voter Question 
-// let age = Number(prompt("What is your Age ?"));
+//Question 1 
 
-// console.log(age)
-// if (isNaN(age)) {
-//     console.log('Wrong Input')
+// Print Reverse Number from 200 to 100 
 
-// }
-// else if (age >= 18) {
-// console.log('You are a Valid Voter You Can Proceed to Vote')
-// } else {
-//     console.log('Your Age is Less Than 18 You Cannot Vote')
+// for(let i = 200; i >= 100; i--) {
+//     console.log(i)
 // }
 
 
-// Shop Discount on Different Amount 
+// Sum of N Natural Numbers  & Factorial of Number
+// 1. Remove Invalid Input 
+// 2.Number Should be positive
 
-let shopamt = Number(prompt('Please Enter Shopping Amount'));
+// let prnum = prompt('Enter The Number');
 
-function calculatePercentage(percentage) {
-   let percentageAmt =  shopamt * percentage / 100;
-   let PaybleAmt = shopamt - percentageAmt;
-    console.log('Payable Amount is : ',PaybleAmt)
-}
-if (isNaN(shopamt)) {
-    console.log('Wrong Input')
 
-}
-else if (shopamt <= 5000) {
-    console.log('Entered Amount is Between 0-5000rs Discount is 0 %')
-    console.log('Payble Amount is :', shopamt)
-}
-else if (shopamt > 5000 && shopamt <= 7000) {
-    console.log('Entered Amount is Between 5001-7000rs Discount is 5 %')
-    calculatePercentage(5)
+// if (prnum === null) {
+//     console.log('User Canceled The Promp') 
+// } else{ 
+
+//   let num =  Number(prnum)
     
+//     if (isNaN(num)) {
+//         console.log('Invalid Input ')
+//     }
+//     let Sum = 0;
+//     let Fact = 1;
+//     if (num > 0) {
+       
+//     for (let i = 1; i <= num; i++) {
+//         Fact = Fact * i;
+//         Sum = Sum + i;
+//     }
+//     } else {
+//         console.log('Number Should Be Positve & More Than Zero')
+    
+//     }
+
+//     if (num > 0) {
+//         console.log('Sum of Natural Numbers',Sum)
+//         console.log('Factorial of Natural Numbers',Fact)
+
+//     }
+    
+
+// }
+
+
+//Factor of Number 
+// let prnum = prompt('Enter The Number');
+
+// if (prnum === null) {
+//     console.log("User Cancelled The Prompt")
+// } else {
+//  let num = Number(prnum)
+//  if (isNaN(num)) {
+//     console.log("Please Enter A Valid Input") 
+//  }  
+
+//  let factArr = [];
+//  for (let i = 1; i <= Math.floor(num/2); i++) {
+//   if (num % i === 0) {
+//     // console.log("Factor is : ", i)
+     
+//     factArr.push(i)
+//   }
+
+ 
+
+//  }
+//  factArr.push(num)
+
+//  console.log('Factor of Number is  :',factArr.join(","))
+
+// }
+
+//Prime Number 
+
+// let prnum = prompt('Enter The Number');
+
+// if (prnum === null) {
+//     console.log("User Cancelled The Prompt")
+// } else {
+//  let num = Number(prnum)
+//  if (isNaN(num)) {
+//     console.log("Please Enter A Valid Input") 
+//  }  
+
+//  if (num > 0) {
+//    console.log(isPrime(num)) 
+//  }
+
+// }
+
+// function isPrime(num) {
+//     if (num <= 1) return false;
+//     if (num === 2) return true;
+//     if (num % 2 === 0 ) return false;
+//     for (let i = 3; i <= Math.floor(Math.sqrt(num)); i +=2) {
+//         if (num % i === 0) {
+//             return false
+//         }
+//     }
+//     return true;
+
+
+// }
+
+
+
+// while loop  start- while(end) {code -change }
+
+
+// let i = 1;
+
+// while(i <= 20) {
+//     //  if(i == 10) continue;
+//     console.log(i)
+//     i++;
+// }
+
+
+//SumofDigit
+
+let prnum = prompt('Enter The Number');
+
+if (prnum === null) {
+    console.log("User Cancelled The Prompt")
+} else {
+ let num = Number(prnum)
+ if (isNaN(num)) {
+    console.log("Please Enter A Valid Input") 
+ }  
+
+ if (num > 0) {
+   StrongNumber(num)
+ }
+
 }
-else if (shopamt > 7000 && shopamt <= 9000) {
-    console.log('Entered Amount is Between 7001-9000rs Discount is 10 %')
-    calculatePercentage(10)
+
+// function sumofdigit(num) {
+
+//    let sum = 0;
+
+//    while (num > 0) {
+//     let rem =  num%10;
+
+//     sum = sum + rem;
+
+//      num =  Math.floor(num/10);
+//    }
+//    console.log(sum)
+// }
+
+
+//Reverse Num
+
+// function revNumber(num) {
+
+//    let rev = 0;
+
+//    while(num > 0) {
+//       let rem = num%10;
+//       rev = rev*10 +rem;
+//       num = Math.floor(num/10)
+//    }
+//    console.log(rev)
+// }
+
+
+//Strong Number
+function StrongNumber (num) {
+   let sum = 0;
+   let copy = num;
+   while (num > 0) {
+      let fact = 1;
+      let rem = num % 10;
+
+      for(let i = 1; i <=rem; i++) {
+         fact = fact * i
+      }
+      sum = sum + fact;
+
+      num = Math.floor(num/10)
+   }
+
+   if (copy === sum) {
+      console.log('Strong Number ')
+   } else {
+      console.log('Is not a Strong Number')
+   }
+
+
 }
-else if (shopamt > 9000) {
-    console.log('Entered Amount is Greater then 9000rs Discount is 20 %')
-    calculatePercentage(20)
-}
+
+
+
+
 
 
 
