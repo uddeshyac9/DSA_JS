@@ -40,24 +40,55 @@
 
 
 
-let arr = [100,200,300,50,40,399,599,499,599]
-let max = Math.max(arr[0],arr[1]);
- let secondMax = Math.min(arr[0],arr[1]);
+// let arr = [100,200,300,50,40,399,599,499,599]
+// let max = Math.max(arr[0],arr[1]);
+//  let secondMax = Math.min(arr[0],arr[1]);
 
-for (let i=1; i < arr.length; i++) {
+// for (let i=1; i < arr.length; i++) {
      
 
-    if (max < arr[i]) {
-    secondMax = max
-      max = arr[i]
-    } else if (arr[i] > secondMax && arr[i] != max ) {
-        secondMax =arr[i]
-    }
+//     if (max < arr[i]) {
+//     secondMax = max
+//       max = arr[i]
+//     } else if (arr[i] > secondMax && arr[i] != max ) {
+//         secondMax =arr[i]
+//     }
  
      
   
 
-}
+// }
 
-console.log(max)
-console.log(secondMax)
+// console.log(max)
+// let arr = [100,200,300,400,500,600,700,800,900]
+
+// let i = 0; 
+// let j = arr.length - 1;
+
+// while (i != j) { 
+// let temp = arr[i]
+// arr[i] = arr[j];
+// j = temp;
+// i++
+// j--
+// }
+
+// console.log('arr',arr)
+
+
+// let arr = [0,1,1,0,0,0,1,0,1,0,1,0,1];
+
+// let i =0 ; let j = 0;
+
+// while(i < arr.length) {
+//     if (arr[i] == 0){
+//         let temp = arr[i]
+//         arr[i]=arr[j];
+//         arr[j] = temp
+//             j++    
+//     }
+//     i++
+       
+// }
+
+// console.log('arr',arr)
